@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Senator Adam Schiff - #BRING HARJIT HOME</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-koulen { font-family: 'Koulen', sans-serif; }
+        .font-readex { font-family: 'Readex Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#f1d48a] min-h-screen">
+    <div class="flex justify-center items-start pt-0 pb-12">
+        <div class="w-[500px] max-w-full bg-[#f1d48a] flex flex-col gap-6 items-center justify-start px-6">
+            <!-- Header Section -->
+            <div class="flex items-center justify-between w-full pt-6 relative">
+                <h1 class="font-koulen text-[#745404] text-[84px] leading-[67px] z-10">
+                    <span>#BRING</span>
+                    <span class="text-[#483b19]">HARJIT</span>
+                    <span>HOME</span>
+                </h1>
+                <div class="bg-cover bg-center w-full bg-no-repeat" 
+                     style="background-image: url('image.webp')">
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div id="main-content" class="flex flex-col gap-4 w-full">
+                <!-- Step 1: Contact Method Selection -->
+                <div id="step-1" class="step-content">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Senator Adam Schiff?
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                        <button id="phone-call-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Select phone call as contact method">
+                            <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                Phone Call
+                            </div>
+                        </button>
+                        <button id="email-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Select email as contact method">
+                            <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                Email
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Name Input -->
+                <div id="step-2" class="step-content hidden">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Senator Adam Schiff?
+                    </div>
+                    <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                            You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method" tabindex="0">change</span>).
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your name?
+                            </div>
+                            <div class="font-readex font-medium text-[#745404] text-[14px] leading-[21px]">
+                                We'll only use this to create your phone script. We never store any of your personal information.
+                            </div>
+                        </div>
+                        <div class="flex gap-2.5 items-center w-full">
+                            <div class="flex-1 bg-black/10 flex items-center px-3 py-4 rounded-lg">
+                                <input type="text" id="name-input" placeholder="Type your full name here" 
+                                       class="bg-transparent w-full font-readex font-semibold text-[#745404] text-[16px] leading-[24px] placeholder-[#745404] focus:outline-none" 
+                                       tabindex="0" aria-label="Enter your full name" aria-required="true">
+                            </div>
+                            <button id="name-done-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Submit your name">
+                                <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
+                                    Done
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: California Residency -->
+                <div id="step-3" class="step-content hidden">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Senator Adam Schiff?
+                    </div>
+                    <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                            You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method-2" tabindex="0">change</span>).
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your name?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="name-display">
+                                Jashdeep
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                Do you live in California?
+                            </div>
+                            <div class="flex gap-2 w-full" role="radiogroup" aria-label="Do you live in California?">
+                                <button id="california-yes" class="flex-1 bg-[#483b19] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="radio" aria-label="Yes, I live in California" aria-checked="false">
+                                    <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
+                                        Yes
+                                    </div>
+                                </button>
+                                <button id="california-no" class="flex-1 bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="radio" aria-label="No, I do not live in California" aria-checked="false">
+                                    <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
+                                        No
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: District Office Selection -->
+                <div id="step-4" class="step-content hidden">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Senator Adam Schiff?
+                    </div>
+                    <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                            You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method-3" tabindex="0">change</span>).
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your name?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="name-display-2">
+                                Jashdeep
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                Do you live in California?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                                Yes
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                Which district office is closest to you?
+                            </div>
+                            <div class="flex flex-col gap-2 w-full" role="radiogroup" aria-label="Select your closest district office">
+                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="San Francisco" tabindex="0" role="radio" aria-label="San Francisco district office" aria-checked="false">
+                                    <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                        San Francisco
+                                    </div>
+                                </button>
+                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="Fresno" tabindex="0" role="radio" aria-label="Fresno district office" aria-checked="false">
+                                    <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                        Fresno
+                                    </div>
+                                </button>
+                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="San Diego" tabindex="0" role="radio" aria-label="San Diego district office" aria-checked="false">
+                                    <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                        San Diego
+                                    </div>
+                                </button>
+                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="Burbank" tabindex="0" role="radio" aria-label="Burbank district office" aria-checked="false">
+                                    <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                        Burbank
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Final Script -->
+                <div id="step-5" class="step-content hidden">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Senator Adam Schiff?
+                    </div>
+                    <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                            You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method-4" tabindex="0">change</span>).
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your name?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="name-display-3">
+                                Jashdeep
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                Do you live in California?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="california-display">
+                                Yes
+                            </div>
+                        </div>
+                        <div id="office-question" class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                Which district office is closest to you?
+                            </div>
+                        </div>
+                        <div id="office-display-container" class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="office-display">
+                                San Francisco
+                            </div>
+                        </div>
+                        <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px] mb-4">
+                            Your personalized script is now ready. Click the button below to give the office a call.
+                        </div>
+                        <div class="flex flex-col gap-2 w-full mb-6">
+                            <button id="call-btn" class="bg-[#483b19] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Call the senator's office">
+                                <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                    Call <span id="call-number">(415) 393-0707</span>
+                                </div>
+                            </button>
+                            <button id="copy-phone-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Copy phone number to clipboard">
+                                <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                    Copy Phone Number
+                                </div>
+                            </button>
+                        </div>
+            <div class="bg-white p-6 rounded-2xl border border-black/25">
+                <div class="font-readex font-medium text-[16px] leading-[24px] text-neutral-900">
+                    <p class="mb-0">
+                        <span>Hello, my name is </span>
+                        <span class="font-semibold" id="script-name">Jashdeep</span>
+                        <span id="constituent-text">, and I live in </span>
+                        <span class="font-bold" id="script-office">San Francisco</span>
+                        <span id="constituent-end">. I'm your constituent.</span>
+                    </p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">
+                        I'm calling to urge Senator Schiff to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.
+                    </p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">Harjit is a 73 year old woman with no criminal record. She has been a Bay Area resident since 1992.</p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">She is elderly and has health issues which need immediate care. Keeping her in ICE detention is cruel and unusual punishment without due process.</p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">She needs to be released now!</p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p>Thank you for your time and for standing with immigrant families.</p>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State management
+        let currentStep = 1;
+        let userData = {
+            name: '',
+            isCaliforniaResident: false,
+            districtOffice: ''
+        };
+
+        // Phone numbers for different offices
+        const officeNumbers = {
+            'San Francisco': '(415) 393-0707',
+            'Fresno': '(559) 485-7430',
+            'San Diego': '(619) 231-9712',
+            'Burbank': '(818) 303-3841'
+        };
+
+        // Step navigation functions
+        function showStep(stepNumber) {
+            // Hide all steps
+            document.querySelectorAll('.step-content').forEach(step => {
+                step.classList.add('hidden');
+            });
+            
+            // Show current step
+            document.getElementById(`step-${stepNumber}`).classList.remove('hidden');
+            currentStep = stepNumber;
+        }
+
+        function updateNameDisplays() {
+            document.querySelectorAll('[id^="name-display"]').forEach(display => {
+                display.textContent = userData.name;
+            });
+            document.getElementById('script-name').textContent = userData.name;
+        }
+
+        function updateOfficeDisplays() {
+            document.getElementById('office-display').textContent = userData.districtOffice;
+            document.getElementById('script-office').textContent = userData.districtOffice;
+        }
+
+        function updateScript() {
+            document.getElementById('script-name').textContent = userData.name;
+            
+            // Update California residency display
+            document.getElementById('california-display').textContent = userData.isCaliforniaResident ? 'Yes' : 'No';
+            
+            // Update phone number display
+            const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
+                ? officeNumbers[userData.districtOffice] 
+                : officeNumbers['San Francisco']; // Default to San Francisco for non-residents
+            document.getElementById('call-number').textContent = phoneNumber;
+            
+            if (userData.isCaliforniaResident && userData.districtOffice) {
+                // Show location text for California residents
+                document.getElementById('constituent-text').textContent = ', and I live in ';
+                document.getElementById('script-office').textContent = userData.districtOffice;
+                document.getElementById('constituent-end').textContent = '. I\'m your constituent.';
+                
+                // Show office information
+                document.getElementById('office-question').style.display = 'flex';
+                document.getElementById('office-display-container').style.display = 'flex';
+                document.getElementById('office-display').textContent = userData.districtOffice;
+            } else {
+                // Hide location text for non-California residents
+                document.getElementById('constituent-text').textContent = '.';
+                document.getElementById('script-office').textContent = '';
+                document.getElementById('constituent-end').textContent = '';
+                
+                // Hide office information
+                document.getElementById('office-question').style.display = 'none';
+                document.getElementById('office-display-container').style.display = 'none';
+            }
+        }
+
+
+        // Keyboard event handler
+        function handleKeyPress(event, action) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                action();
+            }
+        }
+
+        // Radio button group management
+        function updateRadioGroup(groupSelector, selectedId) {
+            const group = document.querySelectorAll(groupSelector);
+            group.forEach(btn => {
+                btn.setAttribute('aria-checked', btn.id === selectedId ? 'true' : 'false');
+                if (btn.id === selectedId) {
+                    btn.classList.add('ring-2', 'ring-[#f1d48a]');
+                } else {
+                    btn.classList.remove('ring-2', 'ring-[#f1d48a]');
+                }
+            });
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Step 1: Contact method selection
+            document.getElementById('phone-call-btn').addEventListener('click', function() {
+                showStep(2);
+            });
+
+            document.getElementById('phone-call-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => showStep(2));
+            });
+
+            document.getElementById('email-btn').addEventListener('click', function() {
+                // For now, just show an alert. Email functionality can be added later.
+                alert('Email functionality will be implemented soon. Please use the phone call option for now.');
+            });
+
+            document.getElementById('email-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    alert('Email functionality will be implemented soon. Please use the phone call option for now.');
+                });
+            });
+
+            // Step 2: Name input
+            document.getElementById('name-done-btn').addEventListener('click', function() {
+                const nameInput = document.getElementById('name-input');
+                const name = nameInput.value.trim();
+                
+                if (name === '') {
+                    alert('Please enter your name.');
+                    return;
+                }
+                
+                userData.name = name;
+                updateNameDisplays();
+                showStep(3);
+            });
+
+            document.getElementById('name-done-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    const nameInput = document.getElementById('name-input');
+                    const name = nameInput.value.trim();
+                    
+                    if (name === '') {
+                        alert('Please enter your name.');
+                        return;
+                    }
+                    
+                    userData.name = name;
+                    updateNameDisplays();
+                    showStep(3);
+                });
+            });
+
+            // Step 3: California residency
+            document.getElementById('california-yes').addEventListener('click', function() {
+                userData.isCaliforniaResident = true;
+                updateRadioGroup('[role="radio"][id^="california"]', 'california-yes');
+                showStep(4);
+            });
+
+            document.getElementById('california-yes').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    userData.isCaliforniaResident = true;
+                    updateRadioGroup('[role="radio"][id^="california"]', 'california-yes');
+                    showStep(4);
+                });
+            });
+
+            document.getElementById('california-no').addEventListener('click', function() {
+                userData.isCaliforniaResident = false;
+                updateRadioGroup('[role="radio"][id^="california"]', 'california-no');
+                // Skip district office selection and go to final step
+                userData.districtOffice = '';
+                updateScript();
+                showStep(5);
+            });
+
+            document.getElementById('california-no').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    userData.isCaliforniaResident = false;
+                    updateRadioGroup('[role="radio"][id^="california"]', 'california-no');
+                    // Skip district office selection and go to final step
+                    userData.districtOffice = '';
+                    updateScript();
+                    showStep(5);
+                });
+            });
+
+            // Step 4: District office selection
+            document.querySelectorAll('.district-office-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    userData.districtOffice = this.getAttribute('data-office');
+                    updateRadioGroup('.district-office-btn', this.id);
+                    updateOfficeDisplays();
+                    updateScript();
+                    showStep(5);
+                });
+
+                btn.addEventListener('keydown', function(event) {
+                    handleKeyPress(event, () => {
+                        userData.districtOffice = this.getAttribute('data-office');
+                        updateRadioGroup('.district-office-btn', this.id);
+                        updateOfficeDisplays();
+                        updateScript();
+                        showStep(5);
+                    });
+                });
+            });
+
+            // Step 5: Final actions
+            document.getElementById('call-btn').addEventListener('click', function() {
+                const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
+                    ? officeNumbers[userData.districtOffice] 
+                    : officeNumbers['San Francisco']; // Default to San Francisco for non-residents
+                window.location.href = `tel:${phoneNumber.replace(/[^\d]/g, '')}`;
+            });
+
+            document.getElementById('call-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
+                        ? officeNumbers[userData.districtOffice] 
+                        : officeNumbers['San Francisco']; // Default to San Francisco for non-residents
+                    window.location.href = `tel:${phoneNumber.replace(/[^\d]/g, '')}`;
+                });
+            });
+
+            document.getElementById('copy-phone-btn').addEventListener('click', function() {
+                const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
+                    ? officeNumbers[userData.districtOffice] 
+                    : officeNumbers['San Francisco']; // Default to San Francisco for non-residents
+                navigator.clipboard.writeText(phoneNumber).then(function() {
+                    alert('Phone number copied to clipboard!');
+                }).catch(function() {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = phoneNumber;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Phone number copied to clipboard!');
+                });
+            });
+
+            document.getElementById('copy-phone-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
+                        ? officeNumbers[userData.districtOffice] 
+                        : officeNumbers['San Francisco']; // Default to San Francisco for non-residents
+                    navigator.clipboard.writeText(phoneNumber).then(function() {
+                        alert('Phone number copied to clipboard!');
+                    }).catch(function() {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = phoneNumber;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        alert('Phone number copied to clipboard!');
+                    });
+                });
+            });
+
+            // Change method buttons
+            document.querySelectorAll('[id^="change-method"]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    showStep(1);
+                });
+
+                btn.addEventListener('keydown', function(event) {
+                    handleKeyPress(event, () => showStep(1));
+                });
+            });
+
+            // Allow Enter key in name input
+            document.getElementById('name-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('name-done-btn').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

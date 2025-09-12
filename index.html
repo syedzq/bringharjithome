@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#BRING HARJIT HOME</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-koulen { font-family: 'Koulen', sans-serif; }
+        .font-readex { font-family: 'Readex Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#f1d48a] min-h-screen">
+    <div class="flex justify-center items-start pt-0 pb-12">
+        <div class="w-[500px] max-w-full bg-[#f1d48a] flex flex-col gap-6 items-center justify-start px-6">
+            <!-- Header Section -->
+            <div class="flex items-center justify-between w-full pt-6 relative">
+                <h1 class="font-koulen text-[#745404] text-[84px] leading-[67px] z-10">
+                    <span>#BRING</span>
+                    <span class="text-[#483b19]">HARJIT</span>
+                    <span>HOME</span>
+                </h1>
+                <div class="bg-cover bg-center w-full h-[266px] bg-no-repeat" 
+                     style="background-image: url('image.webp')">
+                </div>
+            </div>
+
+            <!-- Story Section -->
+            <div class="flex flex-col gap-4 w-full selection:bg-[#745404] selection:text-[#f1d48a]">
+                <div class="font-readex text-[#483b19] text-[16px] leading-[24px] w-full relative">
+                    <!-- Collapsed Content -->
+                    <div id="collapsed-content" class="h-[285px] overflow-hidden relative">
+                        <p class="mb-0">
+                            <span class="font-semibold">Harjit Kaur</span>, also known as Shanta or Sarabjit, is a 73-year-old grandmother who has lived in the East Bay for over 30 years. A resident of Hercules, she worked for two decades at a small business in Berkeley and regularly attended the El Sobrante gurdwara. After her asylum case was denied, Harjit complied with ICE check-ins every six months for more than 13 years. Despite her efforts to obtain travel documents from the Indian Consulate—where she was turned away—ICE assured her she could lawfully remain under supervision.
+                        </p>
+                        <br/>
+                        <p>Now, despite her long record of compliance, ICE has detained Harjit. At her age and with serious health issues like thyroid disease, migraines, knee pain, and anxiety, detention puts her life at risk. She has never refused to return to India but cannot without documents. We urge you to stand with Harjit and demand her release by contacting your representatives today.</p>
+                        
+                        <!-- Read More Button Overlay -->
+                        <div class="absolute bottom-0 bg-gradient-to-b from-transparent to-[#f1d48a] to-[65.155%] h-[118px] flex items-end justify-center w-full">
+                            <button id="read-more-btn" class="bg-black/10 flex items-center justify-center px-3 py-2 rounded-full gap-1.5 transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#483b19] focus:ring-opacity-50">
+                                <div class="font-koulen text-[#483b19] text-[24px] leading-[24px] text-center whitespace-nowrap">
+                                    READ MORE
+                                </div>
+                                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5106 13.3691C9.99917 13.3691 9.53034 13.1387 9.10413 12.6777L1.21923 3.80664C1.06296 3.62695 0.942196 3.43164 0.856954 3.2207C0.778815 3.00195 0.739746 2.76758 0.739746 2.51758C0.739746 2.16602 0.814333 1.84961 0.963507 1.56836C1.11978 1.2793 1.32579 1.05273 1.58151 0.888672C1.83724 0.716797 2.12138 0.630859 2.43393 0.630859C2.90987 0.630859 3.32898 0.830078 3.69125 1.22852L10.9475 9.44336H10.0844L17.3193 1.22852C17.6816 0.830078 18.0972 0.630859 18.566 0.630859C18.8786 0.630859 19.1627 0.716797 19.4184 0.888672C19.6742 1.05273 19.8766 1.2793 20.0258 1.56836C20.1821 1.84961 20.2602 2.16602 20.2602 2.51758C20.2602 3.02539 20.1004 3.45508 19.7807 3.80664L11.9065 12.6777C11.6934 12.9121 11.4732 13.084 11.2458 13.1934C11.0185 13.3027 10.7735 13.3613 10.5106 13.3691Z" fill="#483B19" style="fill:#483B19;fill:color(display-p3 0.2821 0.2303 0.0992);fill-opacity:1;"/>
+                                </svg>                            
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Expanded Content (Hidden by default) -->
+                    <div id="expanded-content" class="hidden">
+                        <p class="mb-0">
+                            <span class="font-semibold">Harjit Kaur</span>, also known as Shanta or Sarabjit, is a 73-year-old grandmother who has lived in the East Bay for over 30 years. A resident of Hercules, she worked for two decades at a small business in Berkeley and regularly attended the El Sobrante gurdwara. After her asylum case was denied, Harjit complied with ICE check-ins every six months for more than 13 years. Despite her efforts to obtain travel documents from the Indian Consulate—where she was turned away—ICE assured her she could lawfully remain under supervision.
+                        </p>
+                        <br/>
+                        <p>Now, despite her long record of compliance, ICE has detained Harjit. At her age and with serious health issues like thyroid disease, migraines, knee pain, and anxiety, detention puts her life at risk. She has never refused to return to India but cannot without documents.</p>
+                        <br/>
+                        <p>Harjit's case represents a failure of our immigration system. She has been a contributing member of her community for decades, paying taxes, working legally, and building relationships with neighbors and friends. Her detention is not only cruel but unnecessary—she poses no flight risk and has demonstrated her commitment to following the law for over 13 years.</p>
+                        <br/>
+                        <p>The community has rallied around Harjit, with over 10,000 people signing petitions calling for her release. Local organizations, faith leaders, and elected officials have all spoken out in support of her case. This is not just about one person—it's about the values we hold as a community and a nation.</p>
+                        <br/>
+                        <p>We urge you to stand with Harjit and demand her release by contacting your representatives today. Together, we can bring Harjit home to her family and community where she belongs.</p>
+                        
+                        <!-- Read Less Button -->
+                        <div class="flex justify-center mt-6">
+                            <button id="read-less-btn" class="bg-black/10  flex items-center justify-center px-3 py-2 rounded-full gap-1.5 transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#483b19] focus:ring-opacity-50">
+                                <div class="font-koulen text-[#483b19] text-[24px] leading-[24px] text-center whitespace-nowrap">
+                                    READ LESS
+                                </div>
+                                <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-180">
+                                    <path d="M10.5106 13.3691C9.99917 13.3691 9.53034 13.1387 9.10413 12.6777L1.21923 3.80664C1.06296 3.62695 0.942196 3.43164 0.856954 3.2207C0.778815 3.00195 0.739746 2.76758 0.739746 2.51758C0.739746 2.16602 0.814333 1.84961 0.963507 1.56836C1.11978 1.2793 1.32579 1.05273 1.58151 0.888672C1.83724 0.716797 2.12138 0.630859 2.43393 0.630859C2.90987 0.630859 3.32898 0.830078 3.69125 1.22852L10.9475 9.44336H10.0844L17.3193 1.22852C17.6816 0.830078 18.0972 0.630859 18.566 0.630859C18.8786 0.630859 19.1627 0.716797 19.4184 0.888672C19.6742 1.05273 19.8766 1.2793 20.0258 1.56836C20.1821 1.84961 20.2602 2.16602 20.2602 2.51758C20.2602 3.02539 20.1004 3.45508 19.7807 3.80664L11.9065 12.6777C11.6934 12.9121 11.4732 13.084 11.2458 13.1934C11.0185 13.3027 10.7735 13.3613 10.5106 13.3691Z" fill="#483B19" style="fill:#483B19;fill:color(display-p3 0.2821 0.2303 0.0992);fill-opacity:1;"/>
+                                </svg>                            
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Section -->
+            <div class="flex flex-col gap-4 w-full">
+                <div class="flex flex-col items-center justify-center text-center w-full">
+                    <div class="font-readex font-bold text-[#483b19] text-[20px] leading-[30px] whitespace-nowrap">
+                        Take Action
+                    </div>
+                    <div class="font-readex font-medium text-[#745404] text-[16px] leading-[24px] whitespace-nowrap">
+                        Call or email a U.S. Congressperson.
+                    </div>
+                </div>
+
+                <!-- Representative Buttons -->
+                <div class="flex flex-col gap-2 w-full">
+                    <a href="padilla.html" class="bg-[#745404] flex flex-col gap-1 items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50">
+                        <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            Senator Alex Padilla
+                        </div>
+                    </a>
+                    <a href="schiff.html" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50">
+                        <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            Senator Adam Schiff
+                        </div>
+                    </a>
+                    <button class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50">
+                        <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            Rep. John Garamendi
+                        </div>
+                    </button>
+                    <a href="simon.html" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50">
+                        <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            Rep. Lateefah Simon
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="flex flex-col items-center justify-center w-full">
+                    <div class="font-readex font-bold text-[#483b19] text-[20px] leading-[30px] text-center whitespace-nowrap">
+                        Help us spread the word
+                    </div>
+                </div>
+
+                <!-- Social Media Grid -->
+                <div class="grid grid-cols-2 gap-2 h-[152px] w-full">
+                    <button id="facebook-share" class="bg-[#0866ff] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                        <div class="font-koulen text-white text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            Facebook
+                        </div>
+                    </button>
+                    <button id="twitter-share" class="bg-black flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                        <div class="font-koulen text-white text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            X / Twitter
+                        </div>
+                    </button>
+                    <button id="instagram-share" class="flex items-center justify-center px-6 py-4 rounded-lg bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                        <div class="font-koulen text-white text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            Instagram
+                        </div>
+                    </button>
+                    <button id="whatsapp-share" class="bg-[#25d366] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                        <div class="font-koulen text-white text-[30px] leading-[36px] text-center whitespace-nowrap">
+                            WhatsApp
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreBtn = document.getElementById('read-more-btn');
+            const readLessBtn = document.getElementById('read-less-btn');
+            const collapsedContent = document.getElementById('collapsed-content');
+            const expandedContent = document.getElementById('expanded-content');
+
+            readMoreBtn.addEventListener('click', function() {
+                // Hide collapsed content
+                collapsedContent.classList.add('hidden');
+                // Show expanded content
+                expandedContent.classList.remove('hidden');
+            });
+
+            readLessBtn.addEventListener('click', function() {
+                // Hide expanded content
+                expandedContent.classList.add('hidden');
+                // Show collapsed content
+                collapsedContent.classList.remove('hidden');
+            });
+
+            // Social media sharing functionality
+            const shareText = "Help bring Harjit Kaur home! The 73-year-old grandmother has lived in the East Bay for 30+ years and is now detained by ICE despite her compliance. She needs our support. #BringHarjitHome";
+            const shareUrl = window.location.href;
+            const shareTitle = "#BRING HARJIT HOME";
+
+            // Facebook sharing
+            document.getElementById('facebook-share').addEventListener('click', function() {
+                const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+                window.open(facebookUrl, '_blank', 'width=600,height=400');
+            });
+
+            // Twitter/X sharing
+            document.getElementById('twitter-share').addEventListener('click', function() {
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+                window.open(twitterUrl, '_blank', 'width=600,height=400');
+            });
+
+            // Instagram sharing (copies text to clipboard since Instagram doesn't support direct URL sharing)
+            document.getElementById('instagram-share').addEventListener('click', function() {
+                // Copy text to clipboard for Instagram
+                navigator.clipboard.writeText(`${shareText}\n\n${shareUrl}`).then(function() {
+                    alert('Text copied to clipboard! You can now paste it in your Instagram post.');
+                }).catch(function() {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = `${shareText}\n\n${shareUrl}`;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Text copied to clipboard! You can now paste it in your Instagram post.');
+                });
+            });
+
+            // WhatsApp sharing
+            document.getElementById('whatsapp-share').addEventListener('click', function() {
+                const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

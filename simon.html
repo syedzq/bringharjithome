@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Rep. Lateefah Simon - #BRING HARJIT HOME</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-koulen { font-family: 'Koulen', sans-serif; }
+        .font-readex { font-family: 'Readex Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#f1d48a] min-h-screen">
+    <div class="flex justify-center items-start pt-0 pb-12">
+        <div class="w-[500px] max-w-full bg-[#f1d48a] flex flex-col gap-6 items-center justify-start px-6">
+            <!-- Header Section -->
+            <div class="flex items-center justify-between w-full pt-6 relative">
+                <h1 class="font-koulen text-[#745404] text-[84px] leading-[67px] z-10">
+                    <span>#BRING</span>
+                    <span class="text-[#483b19]">HARJIT</span>
+                    <span>HOME</span>
+                </h1>
+                <div class="bg-cover bg-center w-full h-[266px] bg-no-repeat" 
+                     style="background-image: url('image.webp')">
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div id="main-content" class="flex flex-col gap-4 w-full">
+                <!-- Step 1: Contact Method Selection -->
+                <div id="step-1" class="step-content">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Representative Lateefah Simon?
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                        <button id="phone-call-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Select phone call as contact method">
+                            <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                Phone Call
+                            </div>
+                        </button>
+                        <button id="email-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Select email as contact method">
+                            <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                Email
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Name Input -->
+                <div id="step-2" class="step-content hidden">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Representative Lateefah Simon?
+                    </div>
+                    <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                            You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method" tabindex="0">change</span>).
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your name?
+                            </div>
+                            <div class="font-readex font-medium text-[#745404] text-[14px] leading-[21px]">
+                                We'll only use this to create your phone script. We never store any of your personal information.
+                            </div>
+                        </div>
+                        <div class="flex gap-2.5 items-center w-full">
+                            <div class="flex-1 bg-black/10 flex items-center px-3 py-4 rounded-lg">
+                                <input type="text" id="name-input" placeholder="Type your full name here" 
+                                       class="bg-transparent w-full font-readex font-semibold text-[#745404] text-[16px] leading-[24px] placeholder-[#745404] focus:outline-none" 
+                                       tabindex="0" aria-label="Enter your full name" aria-required="true">
+                            </div>
+                            <button id="name-done-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Submit your name">
+                                <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
+                                    Done
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Address Input -->
+                <div id="step-3" class="step-content hidden">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Representative Lateefah Simon?
+                    </div>
+                    <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                            You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method-2" tabindex="0">change</span>).
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your name?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="name-display">
+                                Jashdeep
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your address?
+                            </div>
+                            <div class="font-readex font-medium text-[#745404] text-[14px] leading-[21px]">
+                                We'll use this to check if you're in Representative Simon's district.
+                            </div>
+                            <div class="flex gap-2.5 items-center w-full">
+                                <div class="flex-1 bg-black/10 flex items-center px-3 py-4 rounded-lg">
+                                    <input type="text" id="address-input" placeholder="Enter your full address (street, city, state, zip)" 
+                                           class="bg-transparent w-full font-readex font-semibold text-[#745404] text-[16px] leading-[24px] placeholder-[#745404] focus:outline-none" 
+                                           tabindex="0" aria-label="Enter your address" aria-required="true">
+                                </div>
+                                <button id="address-done-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Submit your address">
+                                    <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
+                                        Done
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Final Script -->
+                <div id="step-4" class="step-content hidden">
+                    <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
+                        How would you like to contact the office of Representative Lateefah Simon?
+                    </div>
+                    <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                            You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method-3" tabindex="0">change</span>).
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your name?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="name-display-2">
+                                Jashdeep
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full">
+                            <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
+                                What's your address?
+                            </div>
+                        </div>
+                        <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="address-display">
+                                2401 Durant Avenue, Berkeley, CA 94704
+                            </div>
+                        </div>
+                        <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px] mb-4">
+                            Your personalized script is now ready. Click the button below to give the office a call.
+                        </div>
+                        <div class="flex flex-col gap-2 w-full mb-6">
+                            <button id="call-btn" class="bg-[#483b19] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Call the representative's office">
+                                <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                    Call <span id="call-number">(510) 763-0370</span>
+                                </div>
+                            </button>
+                            <button id="copy-phone-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Copy phone number to clipboard">
+                                <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
+                                    Copy Phone Number
+                                </div>
+                            </button>
+                        </div>
+            <div class="bg-white p-6 rounded-2xl border border-black/25">
+                <div class="font-readex font-medium text-[16px] leading-[24px] text-neutral-900">
+                    <p class="mb-0">
+                        <span>Hello, my name is </span>
+                        <span class="font-semibold" id="script-name">Jashdeep</span>
+                        <span id="constituent-text">, and I live in your district.</span>
+                    </p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">
+                        I'm calling to urge Representative Simon to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.
+                    </p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">Harjit is a 73 year old woman with no criminal record. She has been a Bay Area resident since 1992.</p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">She is elderly and has health issues which need immediate care. Keeping her in ICE detention is cruel and unusual punishment without due process.</p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p class="mb-0">She needs to be released now!</p>
+                    <p class="mb-0">&nbsp;</p>
+                    <p>Thank you for your time and for standing with immigrant families.</p>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State management
+        let currentStep = 1;
+        let userData = {
+            name: '',
+            address: '',
+            isInDistrict: false
+        };
+
+        // Google Civic Info API configuration
+        const CIVIC_API_KEY = 'AIzaSyB-CE3U4ag5aAJ_qddGIFKNIgzOr9q2KFU';
+        const CIVIC_API_URL = 'https://www.googleapis.com/civicinfo/v2/divisionsByAddress';
+
+        // Step navigation functions
+        function showStep(stepNumber) {
+            // Hide all steps
+            document.querySelectorAll('.step-content').forEach(step => {
+                step.classList.add('hidden');
+            });
+            
+            // Show current step
+            document.getElementById(`step-${stepNumber}`).classList.remove('hidden');
+            currentStep = stepNumber;
+        }
+
+        function updateNameDisplays() {
+            document.querySelectorAll('[id^="name-display"]').forEach(display => {
+                display.textContent = userData.name;
+            });
+            document.getElementById('script-name').textContent = userData.name;
+        }
+
+        function updateAddressDisplay() {
+            document.getElementById('address-display').textContent = userData.address;
+        }
+
+        async function checkDistrict(address) {
+            try {
+                const response = await fetch(`${CIVIC_API_URL}?address=${encodeURIComponent(address)}&key=${CIVIC_API_KEY}`);
+                const data = await response.json();
+                
+                // Check if the address is in California's 12th congressional district
+                const isInDistrict = data.divisions && data.divisions['ocd-division/country:us/state:ca/cd:12'];
+                
+                return {
+                    success: true,
+                    isInDistrict: !!isInDistrict,
+                    divisions: data.divisions || {}
+                };
+            } catch (error) {
+                console.error('Error checking district:', error);
+                return {
+                    success: false,
+                    isInDistrict: false,
+                    error: error.message
+                };
+            }
+        }
+
+        function updateScript() {
+            document.getElementById('script-name').textContent = userData.name;
+            
+            // Update constituent text based on district check
+            if (userData.isInDistrict) {
+                document.getElementById('constituent-text').textContent = ', and I live in your district.';
+            } else {
+                document.getElementById('constituent-text').textContent = '.';
+            }
+        }
+
+        // Keyboard event handler
+        function handleKeyPress(event, action) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                action();
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Step 1: Contact method selection
+            document.getElementById('phone-call-btn').addEventListener('click', function() {
+                showStep(2);
+            });
+
+            document.getElementById('phone-call-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => showStep(2));
+            });
+
+            document.getElementById('email-btn').addEventListener('click', function() {
+                alert('Email functionality will be implemented soon. Please use the phone call option for now.');
+            });
+
+            document.getElementById('email-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    alert('Email functionality will be implemented soon. Please use the phone call option for now.');
+                });
+            });
+
+            // Step 2: Name input
+            document.getElementById('name-done-btn').addEventListener('click', function() {
+                const nameInput = document.getElementById('name-input');
+                const name = nameInput.value.trim();
+                
+                if (name === '') {
+                    alert('Please enter your name.');
+                    return;
+                }
+                
+                userData.name = name;
+                updateNameDisplays();
+                showStep(3);
+            });
+
+            document.getElementById('name-done-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    const nameInput = document.getElementById('name-input');
+                    const name = nameInput.value.trim();
+                    
+                    if (name === '') {
+                        alert('Please enter your name.');
+                        return;
+                    }
+                    
+                    userData.name = name;
+                    updateNameDisplays();
+                    showStep(3);
+                });
+            });
+
+            // Step 3: Address input
+            document.getElementById('address-done-btn').addEventListener('click', async function() {
+                const addressInput = document.getElementById('address-input');
+                const address = addressInput.value.trim();
+                
+                if (address === '') {
+                    alert('Please enter your address.');
+                    return;
+                }
+                
+                userData.address = address;
+                updateAddressDisplay();
+                
+                // Show loading state
+                const button = this;
+                const originalText = button.querySelector('div').textContent;
+                button.querySelector('div').textContent = 'Checking...';
+                button.disabled = true;
+                
+                try {
+                    const result = await checkDistrict(address);
+                    userData.isInDistrict = result.isInDistrict;
+                    updateScript();
+                    showStep(4);
+                } catch (error) {
+                    alert('There was an error checking your district. Please try again.');
+                    console.error('District check error:', error);
+                } finally {
+                    // Reset button
+                    button.querySelector('div').textContent = originalText;
+                    button.disabled = false;
+                }
+            });
+
+            document.getElementById('address-done-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, async () => {
+                    const addressInput = document.getElementById('address-input');
+                    const address = addressInput.value.trim();
+                    
+                    if (address === '') {
+                        alert('Please enter your address.');
+                        return;
+                    }
+                    
+                    userData.address = address;
+                    updateAddressDisplay();
+                    
+                    // Show loading state
+                    const button = this;
+                    const originalText = button.querySelector('div').textContent;
+                    button.querySelector('div').textContent = 'Checking...';
+                    button.disabled = true;
+                    
+                    try {
+                        const result = await checkDistrict(address);
+                        userData.isInDistrict = result.isInDistrict;
+                        updateScript();
+                        showStep(4);
+                    } catch (error) {
+                        alert('There was an error checking your district. Please try again.');
+                        console.error('District check error:', error);
+                    } finally {
+                        // Reset button
+                        button.querySelector('div').textContent = originalText;
+                        button.disabled = false;
+                    }
+                });
+            });
+
+            // Step 4: Final actions
+            document.getElementById('call-btn').addEventListener('click', function() {
+                window.location.href = 'tel:5107630370';
+            });
+
+            document.getElementById('call-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    window.location.href = 'tel:5107630370';
+                });
+            });
+
+            document.getElementById('copy-phone-btn').addEventListener('click', function() {
+                const phoneNumber = '(510) 763-0370';
+                navigator.clipboard.writeText(phoneNumber).then(function() {
+                    alert('Phone number copied to clipboard!');
+                }).catch(function() {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = phoneNumber;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Phone number copied to clipboard!');
+                });
+            });
+
+            document.getElementById('copy-phone-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    const phoneNumber = '(510) 763-0370';
+                    navigator.clipboard.writeText(phoneNumber).then(function() {
+                        alert('Phone number copied to clipboard!');
+                    }).catch(function() {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = phoneNumber;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        alert('Phone number copied to clipboard!');
+                    });
+                });
+            });
+
+            // Change method buttons
+            document.querySelectorAll('[id^="change-method"]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    showStep(1);
+                });
+
+                btn.addEventListener('keydown', function(event) {
+                    handleKeyPress(event, () => showStep(1));
+                });
+            });
+
+            // Allow Enter key in name input
+            document.getElementById('name-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('name-done-btn').click();
+                }
+            });
+
+            // Allow Enter key in address input
+            document.getElementById('address-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('address-done-btn').click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
