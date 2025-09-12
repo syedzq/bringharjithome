@@ -55,7 +55,7 @@
                         How would you like to contact the office of Representative Lateefah Simon?
                     </div>
                     <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
-                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="method-display-2">
                             You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method" tabindex="0">change</span>).
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
                                 What's your name?
                             </div>
-                            <div class="font-readex font-medium text-[#745404] text-[14px] leading-[21px]">
+                            <div class="font-readex font-medium text-[#745404] text-[14px] leading-[21px]" id="name-description">
                                 We'll only use this to create your phone script. We never store any of your personal information.
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                         How would you like to contact the office of Representative Lateefah Simon?
                     </div>
                     <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
-                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="method-display-3">
                             You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method-2" tabindex="0">change</span>).
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                         How would you like to contact the office of Representative Lateefah Simon?
                     </div>
                     <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
-                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
+                        <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="method-display-4">
                             You selected phone call (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" id="change-method-3" tabindex="0">change</span>).
                         </div>
                     </div>
@@ -158,10 +158,10 @@
                                 2401 Durant Avenue, Berkeley, CA 94704
                             </div>
                         </div>
-                        <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px] mb-4">
+                        <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px] mb-4" id="final-instruction">
                             Your personalized script is now ready. Click the button below to give the office a call.
                         </div>
-                        <div class="flex flex-col gap-2 w-full mb-6">
+                        <div class="flex flex-col gap-2 w-full mb-6" id="action-buttons">
                             <button id="call-btn" class="bg-[#483b19] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Call the representative's office">
                                 <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
                                     Call <span id="call-number">(510) 763-0370</span>
@@ -173,15 +173,15 @@
                                 </div>
                             </button>
                         </div>
-            <div class="bg-white p-6 rounded-2xl border border-black/25">
-                <div class="font-readex font-medium text-[16px] leading-[24px] text-neutral-900">
+            <div class="bg-white p-6 rounded-2xl border border-black/25" id="script-container">
+                <div class="font-readex font-medium text-[16px] leading-[24px] text-neutral-900" id="script-content">
                     <p class="mb-0">
                         <span>Hello, my name is </span>
                         <span class="font-semibold" id="script-name">Jashdeep</span>
                         <span id="constituent-text">, and I live in your district.</span>
                     </p>
                     <p class="mb-0">&nbsp;</p>
-                    <p class="mb-0">
+                    <p class="mb-0" id="action-text">
                         I'm calling to urge Representative Simon to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.
                     </p>
                     <p class="mb-0">&nbsp;</p>
@@ -192,6 +192,13 @@
                     <p class="mb-0">She needs to be released now!</p>
                     <p class="mb-0">&nbsp;</p>
                     <p>Thank you for your time and for standing with immigrant families.</p>
+                </div>
+                <div class="mt-4">
+                    <button id="copy-script-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Copy script to clipboard">
+                        <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
+                            Copy Script
+                        </div>
+                    </button>
                 </div>
             </div>
                     </div>
@@ -206,7 +213,8 @@
         let userData = {
             name: '',
             address: '',
-            isInDistrict: false
+            isInDistrict: false,
+            contactMethod: 'phone'
         };
 
         // Google Civic Info API configuration
@@ -259,6 +267,19 @@
             }
         }
 
+        function updateMethodDisplays() {
+            const methodText = userData.contactMethod === 'email' ? 'email' : 'phone call';
+            document.querySelectorAll('[id^="method-display"]').forEach(display => {
+                display.innerHTML = `You selected ${methodText} (<span class="underline cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50 rounded px-1" tabindex="0">change</span>).`;
+            });
+            
+            // Update name description
+            const nameDesc = userData.contactMethod === 'email' 
+                ? 'We\'ll only use this to create your email script. We never store any of your personal information.'
+                : 'We\'ll only use this to create your phone script. We never store any of your personal information.';
+            document.getElementById('name-description').textContent = nameDesc;
+        }
+
         function updateScript() {
             document.getElementById('script-name').textContent = userData.name;
             
@@ -267,6 +288,26 @@
                 document.getElementById('constituent-text').textContent = ', and I live in your district.';
             } else {
                 document.getElementById('constituent-text').textContent = '.';
+            }
+
+            // Update action text based on contact method
+            if (userData.contactMethod === 'email') {
+                document.getElementById('action-text').textContent = 'I\'m writing to urge Representative Simon to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.';
+            } else {
+                document.getElementById('action-text').textContent = 'I\'m calling to urge Representative Simon to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.';
+            }
+
+            // Update final instruction and action buttons based on contact method
+            if (userData.contactMethod === 'email') {
+                document.getElementById('final-instruction').textContent = 'Your personalized script is now ready. Click the button below to open the contact form.';
+                document.getElementById('call-btn').innerHTML = '<div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">Open Contact Form</div>';
+                document.getElementById('call-btn').setAttribute('aria-label', 'Open Representative Simon\'s contact form');
+                document.getElementById('copy-phone-btn').style.display = 'none';
+            } else {
+                document.getElementById('final-instruction').textContent = 'Your personalized script is now ready. Click the button below to give the office a call.';
+                document.getElementById('call-btn').innerHTML = '<div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">Call <span id="call-number">(510) 763-0370</span></div>';
+                document.getElementById('call-btn').setAttribute('aria-label', 'Call the representative\'s office');
+                document.getElementById('copy-phone-btn').style.display = 'flex';
             }
         }
 
@@ -282,20 +323,30 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Step 1: Contact method selection
             document.getElementById('phone-call-btn').addEventListener('click', function() {
+                userData.contactMethod = 'phone';
+                updateMethodDisplays();
                 showStep(2);
             });
 
             document.getElementById('phone-call-btn').addEventListener('keydown', function(event) {
-                handleKeyPress(event, () => showStep(2));
+                handleKeyPress(event, () => {
+                    userData.contactMethod = 'phone';
+                    updateMethodDisplays();
+                    showStep(2);
+                });
             });
 
             document.getElementById('email-btn').addEventListener('click', function() {
-                alert('Email functionality will be implemented soon. Please use the phone call option for now.');
+                userData.contactMethod = 'email';
+                updateMethodDisplays();
+                showStep(2);
             });
 
             document.getElementById('email-btn').addEventListener('keydown', function(event) {
                 handleKeyPress(event, () => {
-                    alert('Email functionality will be implemented soon. Please use the phone call option for now.');
+                    userData.contactMethod = 'email';
+                    updateMethodDisplays();
+                    showStep(2);
                 });
             });
 
@@ -401,12 +452,20 @@
 
             // Step 4: Final actions
             document.getElementById('call-btn').addEventListener('click', function() {
-                window.location.href = 'tel:5107630370';
+                if (userData.contactMethod === 'email') {
+                    window.open('https://simon.house.gov/contactform', '_blank');
+                } else {
+                    window.location.href = 'tel:5107630370';
+                }
             });
 
             document.getElementById('call-btn').addEventListener('keydown', function(event) {
                 handleKeyPress(event, () => {
-                    window.location.href = 'tel:5107630370';
+                    if (userData.contactMethod === 'email') {
+                        window.open('https://simon.house.gov/contactform', '_blank');
+                    } else {
+                        window.location.href = 'tel:5107630370';
+                    }
                 });
             });
 
@@ -440,6 +499,41 @@
                         document.execCommand('copy');
                         document.body.removeChild(textArea);
                         alert('Phone number copied to clipboard!');
+                    });
+                });
+            });
+
+            // Copy script button
+            document.getElementById('copy-script-btn').addEventListener('click', function() {
+                const scriptText = document.getElementById('script-content').innerText;
+                navigator.clipboard.writeText(scriptText).then(function() {
+                    alert('Script copied to clipboard!');
+                }).catch(function() {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = scriptText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Script copied to clipboard!');
+                });
+            });
+
+            document.getElementById('copy-script-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, () => {
+                    const scriptText = document.getElementById('script-content').innerText;
+                    navigator.clipboard.writeText(scriptText).then(function() {
+                        alert('Script copied to clipboard!');
+                    }).catch(function() {
+                        // Fallback for older browsers
+                        const textArea = document.createElement('textarea');
+                        textArea.value = scriptText;
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        alert('Script copied to clipboard!');
                     });
                 });
             });

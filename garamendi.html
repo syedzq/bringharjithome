@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Senator Alex Padilla - #BRING HARJIT HOME</title>
+    <title>Contact Rep. John Garamendi - #BRING HARJIT HOME</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
                     <span class="text-[#483b19]">HARJIT</span>
                     <span>HOME</span>
                 </h1>
-                <div class="bg-cover bg-center w-full bg-no-repeat" 
+                <div class="bg-cover bg-center w-full h-[266px] bg-no-repeat" 
                      style="background-image: url('image.webp')">
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <!-- Step 1: Contact Method Selection -->
                 <div id="step-1" class="step-content">
                     <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
-                        How would you like to contact the office of Senator Alex Padilla?
+                        How would you like to contact the office of Representative John Garamendi?
                     </div>
                     <div class="flex flex-col gap-2 w-full">
                         <button id="phone-call-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Select phone call as contact method">
@@ -52,7 +52,7 @@
                 <!-- Step 2: Name Input -->
                 <div id="step-2" class="step-content hidden">
                     <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
-                        How would you like to contact the office of Senator Alex Padilla?
+                        How would you like to contact the office of Representative John Garamendi?
                     </div>
                     <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
                         <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="method-display-2">
@@ -83,10 +83,10 @@
                     </div>
                 </div>
 
-                <!-- Step 3: California Residency -->
+                <!-- Step 3: Address Input -->
                 <div id="step-3" class="step-content hidden">
                     <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
-                        How would you like to contact the office of Senator Alex Padilla?
+                        How would you like to contact the office of Representative John Garamendi?
                     </div>
                     <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
                         <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="method-display-3">
@@ -106,17 +106,20 @@
                         </div>
                         <div class="flex flex-col gap-4 w-full">
                             <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
-                                Do you live in California?
+                                What's your address?
                             </div>
-                            <div class="flex gap-2 w-full" role="radiogroup" aria-label="Do you live in California?">
-                                <button id="california-yes" class="flex-1 bg-[#483b19] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="radio" aria-label="Yes, I live in California" aria-checked="false">
+                            <div class="font-readex font-medium text-[#745404] text-[14px] leading-[21px]">
+                                We'll use this to check if you're in Representative Garamendi's district.
+                            </div>
+                            <div class="flex gap-2.5 items-center w-full">
+                                <div class="flex-1 bg-black/10 flex items-center px-3 py-4 rounded-lg">
+                                    <input type="text" id="address-input" placeholder="Enter your full address (street, city, state, zip)" 
+                                           class="bg-transparent w-full font-readex font-semibold text-[#745404] text-[16px] leading-[24px] placeholder-[#745404] focus:outline-none" 
+                                           tabindex="0" aria-label="Enter your address" aria-required="true">
+                                </div>
+                                <button id="address-done-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Submit your address">
                                     <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
-                                        Yes
-                                    </div>
-                                </button>
-                                <button id="california-no" class="flex-1 bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="radio" aria-label="No, I do not live in California" aria-checked="false">
-                                    <div class="font-koulen text-[#f1d48a] text-[20px] leading-[24px] text-center whitespace-nowrap">
-                                        No
+                                        Done
                                     </div>
                                 </button>
                             </div>
@@ -124,10 +127,10 @@
                     </div>
                 </div>
 
-                <!-- Step 4: District Office Selection -->
+                <!-- Step 4: City Selection -->
                 <div id="step-4" class="step-content hidden">
                     <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
-                        How would you like to contact the office of Senator Alex Padilla?
+                        How would you like to contact the office of Representative John Garamendi?
                     </div>
                     <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
                         <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="method-display-4">
@@ -147,42 +150,32 @@
                         </div>
                         <div class="flex flex-col gap-1 w-full">
                             <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
-                                Do you live in California?
+                                What's your address?
                             </div>
                         </div>
                         <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
-                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap">
-                                Yes
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="address-display">
+                                2401 Durant Avenue, Berkeley, CA 94704
                             </div>
                         </div>
                         <div class="flex flex-col gap-4 w-full">
                             <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
-                                Which district office is closest to you?
+                                Which city is closest to you?
                             </div>
-                            <div class="flex flex-col gap-2 w-full" role="radiogroup" aria-label="Select your closest district office">
-                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="Sacramento" tabindex="0" role="radio" aria-label="Sacramento district office" aria-checked="false">
+                            <div class="flex flex-col gap-2 w-full" role="radiogroup" aria-label="Select your closest city">
+                                <button class="city-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-city="Vallejo" tabindex="0" role="radio" aria-label="Vallejo office" aria-checked="false">
                                     <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
-                                        Sacramento
+                                        Vallejo
                                     </div>
                                 </button>
-                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="San Francisco" tabindex="0" role="radio" aria-label="San Francisco district office" aria-checked="false">
+                                <button class="city-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-city="Richmond" tabindex="0" role="radio" aria-label="Richmond office" aria-checked="false">
                                     <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
-                                        San Francisco
+                                        Richmond
                                     </div>
                                 </button>
-                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="Fresno" tabindex="0" role="radio" aria-label="Fresno district office" aria-checked="false">
+                                <button class="city-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-city="Fairfield" tabindex="0" role="radio" aria-label="Fairfield office" aria-checked="false">
                                     <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
-                                        Fresno
-                                    </div>
-                                </button>
-                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="Los Angeles" tabindex="0" role="radio" aria-label="Los Angeles district office" aria-checked="false">
-                                    <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
-                                        Los Angeles
-                                    </div>
-                                </button>
-                                <button class="district-office-btn bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" data-office="San Diego" tabindex="0" role="radio" aria-label="San Diego district office" aria-checked="false">
-                                    <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
-                                        San Diego
+                                        Fairfield
                                     </div>
                                 </button>
                             </div>
@@ -193,7 +186,7 @@
                 <!-- Step 5: Final Script -->
                 <div id="step-5" class="step-content hidden">
                     <div class="font-readex font-semibold text-[#483b19] text-[16px] leading-[24px] w-full mb-4">
-                        How would you like to contact the office of Senator Alex Padilla?
+                        How would you like to contact the office of Representative John Garamendi?
                     </div>
                     <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
                         <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="method-display-5">
@@ -213,31 +206,31 @@
                         </div>
                         <div class="flex flex-col gap-1 w-full">
                             <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
-                                Do you live in California?
+                                What's your address?
                             </div>
                         </div>
                         <div class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
-                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="california-display">
-                                Yes
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="address-display-2">
+                                2401 Durant Avenue, Berkeley, CA 94704
                             </div>
                         </div>
-                        <div id="office-question" class="flex flex-col gap-1 w-full">
+                        <div id="city-question" class="flex flex-col gap-1 w-full">
                             <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px]">
-                                Which district office is closest to you?
+                                Which city is closest to you?
                             </div>
                         </div>
-                        <div id="office-display-container" class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
-                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="office-display">
-                                Sacramento
+                        <div id="city-display-container" class="bg-[#745404] w-fit flex items-center justify-end px-3 py-2 rounded-full mb-4 ml-auto">
+                            <div class="font-readex font-normal text-[#f1d48a] text-[16px] leading-[24px] text-center whitespace-nowrap" id="city-display">
+                                Vallejo
                             </div>
                         </div>
                         <div class="font-readex font-medium text-[#483b19] text-[16px] leading-[24px] mb-4" id="final-instruction">
                             Your personalized script is now ready. Click the button below to give the office a call.
                         </div>
                         <div class="flex flex-col gap-2 w-full mb-6" id="action-buttons">
-                            <button id="call-btn" class="bg-[#483b19] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Call the senator's office">
+                            <button id="call-btn" class="bg-[#483b19] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Call the representative's office">
                                 <div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">
-                                    Call <span id="call-number">(916) 448-2787</span>
+                                    Call <span id="call-number">(707) 645-1888</span>
                                 </div>
                             </button>
                             <button id="copy-phone-btn" class="bg-[#745404] flex items-center justify-center px-6 py-4 rounded-lg w-full transition-transform duration-150 ease-in-out hover:scale-[0.98] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#f1d48a] focus:ring-opacity-50" tabindex="0" role="button" aria-label="Copy phone number to clipboard">
@@ -251,13 +244,11 @@
                     <p class="mb-0">
                         <span>Hello, my name is </span>
                         <span class="font-semibold" id="script-name">Jashdeep</span>
-                        <span id="constituent-text">, and I live in </span>
-                        <span class="font-bold" id="script-office">Sacramento</span>
-                        <span id="constituent-end">. I'm your constituent.</span>
+                        <span id="constituent-text">, and I live in your district.</span>
                     </p>
                     <p class="mb-0">&nbsp;</p>
                     <p class="mb-0" id="action-text">
-                        I'm calling to urge Senator Padilla to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.
+                        I'm calling to urge Representative Garamendi to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.
                     </p>
                     <p class="mb-0">&nbsp;</p>
                     <p class="mb-0">Harjit is a 73 year old woman with no criminal record. She has been a Bay Area resident since 1992.</p>
@@ -287,18 +278,21 @@
         let currentStep = 1;
         let userData = {
             name: '',
-            isCaliforniaResident: false,
-            districtOffice: '',
+            address: '',
+            isInDistrict: false,
+            selectedCity: '',
             contactMethod: 'phone'
         };
 
-        // Phone numbers for different offices
-        const officeNumbers = {
-            'Sacramento': '(916) 448-2787',
-            'San Francisco': '(415) 981-9369',
-            'Fresno': '(559) 497-5109',
-            'Los Angeles': '(310) 231-4494',
-            'San Diego': '(619) 239-3884'
+        // Google Civic Info API configuration
+        const CIVIC_API_KEY = 'AIzaSyB-CE3U4ag5aAJ_qddGIFKNIgzOr9q2KFU';
+        const CIVIC_API_URL = 'https://www.googleapis.com/civicinfo/v2/divisionsByAddress';
+
+        // Phone numbers for different cities
+        const cityNumbers = {
+            'Vallejo': '(707) 645-1888',
+            'Richmond': '(510) 620-1001',
+            'Fairfield': '(707) 438-1822'
         };
 
         // Step navigation functions
@@ -320,9 +314,36 @@
             document.getElementById('script-name').textContent = userData.name;
         }
 
-        function updateOfficeDisplays() {
-            document.getElementById('office-display').textContent = userData.districtOffice;
-            document.getElementById('script-office').textContent = userData.districtOffice;
+        function updateAddressDisplay() {
+            document.getElementById('address-display').textContent = userData.address;
+            document.getElementById('address-display-2').textContent = userData.address;
+        }
+
+        function updateCityDisplays() {
+            document.getElementById('city-display').textContent = userData.selectedCity;
+        }
+
+        async function checkDistrict(address) {
+            try {
+                const response = await fetch(`${CIVIC_API_URL}?address=${encodeURIComponent(address)}&key=${CIVIC_API_KEY}`);
+                const data = await response.json();
+                
+                // Check if the address is in California's 8th congressional district
+                const isInDistrict = data.divisions && data.divisions['ocd-division/country:us/state:ca/cd:8'];
+                
+                return {
+                    success: true,
+                    isInDistrict: !!isInDistrict,
+                    divisions: data.divisions || {}
+                };
+            } catch (error) {
+                console.error('Error checking district:', error);
+                return {
+                    success: false,
+                    isInDistrict: false,
+                    error: error.message
+                };
+            }
         }
 
         function updateMethodDisplays() {
@@ -341,57 +362,50 @@
         function updateScript() {
             document.getElementById('script-name').textContent = userData.name;
             
-            // Update California residency display
-            document.getElementById('california-display').textContent = userData.isCaliforniaResident ? 'Yes' : 'No';
-            
-            // Update phone number display
-            const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
-                ? officeNumbers[userData.districtOffice] 
-                : officeNumbers['Sacramento'];
-            document.getElementById('call-number').textContent = phoneNumber;
-            
-            if (userData.isCaliforniaResident && userData.districtOffice) {
-                // Show location text for California residents
-                document.getElementById('constituent-text').textContent = ', and I live in ';
-                document.getElementById('script-office').textContent = userData.districtOffice;
-                document.getElementById('constituent-end').textContent = '. I\'m your constituent.';
-                
-                // Show office information
-                document.getElementById('office-question').style.display = 'flex';
-                document.getElementById('office-display-container').style.display = 'flex';
-                document.getElementById('office-display').textContent = userData.districtOffice;
+            // Update constituent text based on district check
+            if (userData.isInDistrict) {
+                document.getElementById('constituent-text').textContent = ', and I live in your district.';
             } else {
-                // Hide location text for non-California residents
                 document.getElementById('constituent-text').textContent = '.';
-                document.getElementById('script-office').textContent = '';
-                document.getElementById('constituent-end').textContent = '';
-                
-                // Hide office information
-                document.getElementById('office-question').style.display = 'none';
-                document.getElementById('office-display-container').style.display = 'none';
+            }
+
+            // Update phone number based on selected city
+            if (userData.selectedCity && cityNumbers[userData.selectedCity]) {
+                document.getElementById('call-number').textContent = cityNumbers[userData.selectedCity];
+            }
+
+            // Show/hide city question and display based on district status
+            if (userData.isInDistrict) {
+                // Show city information for district residents
+                document.getElementById('city-question').style.display = 'flex';
+                document.getElementById('city-display-container').style.display = 'flex';
+                document.getElementById('city-display').textContent = userData.selectedCity;
+            } else {
+                // Hide city information for non-district residents
+                document.getElementById('city-question').style.display = 'none';
+                document.getElementById('city-display-container').style.display = 'none';
             }
 
             // Update action text based on contact method
             if (userData.contactMethod === 'email') {
-                document.getElementById('action-text').textContent = 'I\'m writing to urge Senator Padilla to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.';
+                document.getElementById('action-text').textContent = 'I\'m writing to urge Representative Garamendi to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.';
             } else {
-                document.getElementById('action-text').textContent = 'I\'m calling to urge Senator Padilla to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.';
+                document.getElementById('action-text').textContent = 'I\'m calling to urge Representative Garamendi to take immediate action to secure the release of 73 year old Harjit who is detained by ICE.';
             }
 
             // Update final instruction and action buttons based on contact method
             if (userData.contactMethod === 'email') {
                 document.getElementById('final-instruction').textContent = 'Your personalized script is now ready. Click the button below to open the contact form.';
                 document.getElementById('call-btn').innerHTML = '<div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">Open Contact Form</div>';
-                document.getElementById('call-btn').setAttribute('aria-label', 'Open Senator Padilla\'s contact form');
+                document.getElementById('call-btn').setAttribute('aria-label', 'Open Representative Garamendi\'s contact form');
                 document.getElementById('copy-phone-btn').style.display = 'none';
             } else {
                 document.getElementById('final-instruction').textContent = 'Your personalized script is now ready. Click the button below to give the office a call.';
-                document.getElementById('call-btn').innerHTML = '<div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">Call <span id="call-number">(916) 448-2787</span></div>';
-                document.getElementById('call-btn').setAttribute('aria-label', 'Call the senator\'s office');
+                document.getElementById('call-btn').innerHTML = '<div class="font-koulen text-[#f1d48a] text-[30px] leading-[36px] text-center whitespace-nowrap">Call <span id="call-number">(707) 645-1888</span></div>';
+                document.getElementById('call-btn').setAttribute('aria-label', 'Call the representative\'s office');
                 document.getElementById('copy-phone-btn').style.display = 'flex';
             }
         }
-
 
         // Keyboard event handler
         function handleKeyPress(event, action) {
@@ -476,56 +490,108 @@
                 });
             });
 
-            // Step 3: California residency
-            document.getElementById('california-yes').addEventListener('click', function() {
-                userData.isCaliforniaResident = true;
-                updateRadioGroup('[role="radio"][id^="california"]', 'california-yes');
-                showStep(4);
+            // Step 3: Address input
+            document.getElementById('address-done-btn').addEventListener('click', async function() {
+                const addressInput = document.getElementById('address-input');
+                const address = addressInput.value.trim();
+                
+                if (address === '') {
+                    alert('Please enter your address.');
+                    return;
+                }
+                
+                userData.address = address;
+                updateAddressDisplay();
+                
+                // Show loading state
+                const button = this;
+                const originalText = button.querySelector('div').textContent;
+                button.querySelector('div').textContent = 'Checking...';
+                button.disabled = true;
+                
+                try {
+                    const result = await checkDistrict(address);
+                    userData.isInDistrict = result.isInDistrict;
+                    
+                    if (userData.isInDistrict) {
+                        // If in district, show city selection
+                        updateScript();
+                        showStep(4);
+                    } else {
+                        // If not in district, skip city selection and default to Richmond
+                        userData.selectedCity = 'Richmond';
+                        updateScript();
+                        showStep(5);
+                    }
+                } catch (error) {
+                    alert('There was an error checking your district. Please try again.');
+                    console.error('District check error:', error);
+                } finally {
+                    // Reset button
+                    button.querySelector('div').textContent = originalText;
+                    button.disabled = false;
+                }
             });
 
-            document.getElementById('california-yes').addEventListener('keydown', function(event) {
-                handleKeyPress(event, () => {
-                    userData.isCaliforniaResident = true;
-                    updateRadioGroup('[role="radio"][id^="california"]', 'california-yes');
-                    showStep(4);
+            document.getElementById('address-done-btn').addEventListener('keydown', function(event) {
+                handleKeyPress(event, async () => {
+                    const addressInput = document.getElementById('address-input');
+                    const address = addressInput.value.trim();
+                    
+                    if (address === '') {
+                        alert('Please enter your address.');
+                        return;
+                    }
+                    
+                    userData.address = address;
+                    updateAddressDisplay();
+                    
+                    // Show loading state
+                    const button = this;
+                    const originalText = button.querySelector('div').textContent;
+                    button.querySelector('div').textContent = 'Checking...';
+                    button.disabled = true;
+                    
+                    try {
+                        const result = await checkDistrict(address);
+                        userData.isInDistrict = result.isInDistrict;
+                        
+                        if (userData.isInDistrict) {
+                            // If in district, show city selection
+                            updateScript();
+                            showStep(4);
+                        } else {
+                            // If not in district, skip city selection and default to Richmond
+                            userData.selectedCity = 'Richmond';
+                            updateScript();
+                            showStep(5);
+                        }
+                    } catch (error) {
+                        alert('There was an error checking your district. Please try again.');
+                        console.error('District check error:', error);
+                    } finally {
+                        // Reset button
+                        button.querySelector('div').textContent = originalText;
+                        button.disabled = false;
+                    }
                 });
             });
 
-            document.getElementById('california-no').addEventListener('click', function() {
-                userData.isCaliforniaResident = false;
-                updateRadioGroup('[role="radio"][id^="california"]', 'california-no');
-                // Skip district office selection and go to final step
-                userData.districtOffice = '';
-                updateScript();
-                showStep(5);
-            });
-
-            document.getElementById('california-no').addEventListener('keydown', function(event) {
-                handleKeyPress(event, () => {
-                    userData.isCaliforniaResident = false;
-                    updateRadioGroup('[role="radio"][id^="california"]', 'california-no');
-                    // Skip district office selection and go to final step
-                    userData.districtOffice = '';
-                    updateScript();
-                    showStep(5);
-                });
-            });
-
-            // Step 4: District office selection
-            document.querySelectorAll('.district-office-btn').forEach(btn => {
+            // Step 4: City selection
+            document.querySelectorAll('.city-btn').forEach(btn => {
                 btn.addEventListener('click', function() {
-                    userData.districtOffice = this.getAttribute('data-office');
-                    updateRadioGroup('.district-office-btn', this.id);
-                    updateOfficeDisplays();
+                    userData.selectedCity = this.getAttribute('data-city');
+                    updateRadioGroup('.city-btn', this.id);
+                    updateCityDisplays();
                     updateScript();
                     showStep(5);
                 });
 
                 btn.addEventListener('keydown', function(event) {
                     handleKeyPress(event, () => {
-                        userData.districtOffice = this.getAttribute('data-office');
-                        updateRadioGroup('.district-office-btn', this.id);
-                        updateOfficeDisplays();
+                        userData.selectedCity = this.getAttribute('data-city');
+                        updateRadioGroup('.city-btn', this.id);
+                        updateCityDisplays();
                         updateScript();
                         showStep(5);
                     });
@@ -535,11 +601,11 @@
             // Step 5: Final actions
             document.getElementById('call-btn').addEventListener('click', function() {
                 if (userData.contactMethod === 'email') {
-                    window.open('https://www.padilla.senate.gov/contact/contact-form/', '_blank');
+                    window.open('https://garamendi.house.gov/contact', '_blank');
                 } else {
-                    const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
-                        ? officeNumbers[userData.districtOffice] 
-                        : officeNumbers['Sacramento']; // Default to Sacramento for non-residents
+                    const phoneNumber = userData.selectedCity && cityNumbers[userData.selectedCity] 
+                        ? cityNumbers[userData.selectedCity] 
+                        : cityNumbers['Vallejo']; // Default to Vallejo
                     window.location.href = `tel:${phoneNumber.replace(/[^\d]/g, '')}`;
                 }
             });
@@ -547,20 +613,20 @@
             document.getElementById('call-btn').addEventListener('keydown', function(event) {
                 handleKeyPress(event, () => {
                     if (userData.contactMethod === 'email') {
-                        window.open('https://www.padilla.senate.gov/contact/contact-form/', '_blank');
+                        window.open('https://garamendi.house.gov/contact', '_blank');
                     } else {
-                        const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
-                            ? officeNumbers[userData.districtOffice] 
-                            : officeNumbers['Sacramento']; // Default to Sacramento for non-residents
+                        const phoneNumber = userData.selectedCity && cityNumbers[userData.selectedCity] 
+                            ? cityNumbers[userData.selectedCity] 
+                            : cityNumbers['Vallejo']; // Default to Vallejo
                         window.location.href = `tel:${phoneNumber.replace(/[^\d]/g, '')}`;
                     }
                 });
             });
 
             document.getElementById('copy-phone-btn').addEventListener('click', function() {
-                const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
-                    ? officeNumbers[userData.districtOffice] 
-                    : officeNumbers['Sacramento']; // Default to Sacramento for non-residents
+                const phoneNumber = userData.selectedCity && cityNumbers[userData.selectedCity] 
+                    ? cityNumbers[userData.selectedCity] 
+                    : cityNumbers['Vallejo']; // Default to Vallejo
                 navigator.clipboard.writeText(phoneNumber).then(function() {
                     alert('Phone number copied to clipboard!');
                 }).catch(function() {
@@ -577,9 +643,9 @@
 
             document.getElementById('copy-phone-btn').addEventListener('keydown', function(event) {
                 handleKeyPress(event, () => {
-                    const phoneNumber = userData.isCaliforniaResident && userData.districtOffice 
-                        ? officeNumbers[userData.districtOffice] 
-                        : officeNumbers['Sacramento']; // Default to Sacramento for non-residents
+                    const phoneNumber = userData.selectedCity && cityNumbers[userData.selectedCity] 
+                        ? cityNumbers[userData.selectedCity] 
+                        : cityNumbers['Vallejo']; // Default to Vallejo
                     navigator.clipboard.writeText(phoneNumber).then(function() {
                         alert('Phone number copied to clipboard!');
                     }).catch(function() {
@@ -645,6 +711,13 @@
             document.getElementById('name-input').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     document.getElementById('name-done-btn').click();
+                }
+            });
+
+            // Allow Enter key in address input
+            document.getElementById('address-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('address-done-btn').click();
                 }
             });
         });
