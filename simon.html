@@ -177,7 +177,7 @@
                 <div class="font-readex font-medium text-[16px] leading-[24px] text-neutral-900" id="script-content">
                     <p class="mb-0">
                         <span>Hello, my name is </span>
-                        <span class="font-semibold" id="script-name">Jashdeep</span>
+                        <span class="font-semibold" id="script-name"></span>
                         <span id="constituent-text">, and I live in your district.</span>
                     </p>
                     <p class="mb-0">&nbsp;</p>
@@ -319,8 +319,15 @@
             }
         }
 
+        // Initialize script content
+        function initializeScript() {
+            updateScript();
+        }
+
         // Event listeners
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize script content on page load
+            initializeScript();
             // Step 1: Contact method selection
             document.getElementById('phone-call-btn').addEventListener('click', function() {
                 userData.contactMethod = 'phone';

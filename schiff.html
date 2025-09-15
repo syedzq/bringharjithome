@@ -408,6 +408,32 @@
             });
         }
 
+        // Fallback copy function for when clipboard API is not available
+        function copyToClipboardFallback(text) {
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    alert('Script copied to clipboard!');
+                } else {
+                    alert('Unable to copy script. Please select and copy the text manually.');
+                }
+            } catch (err) {
+                console.error('Fallback copy failed:', err);
+                alert('Unable to copy script. Please select and copy the text manually.');
+            }
+        }
+
         // Event listeners
         document.addEventListener('DOMContentLoaded', function() {
             // Step 1: Contact method selection
